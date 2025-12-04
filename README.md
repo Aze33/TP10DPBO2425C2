@@ -64,6 +64,23 @@ project/
 │
 └── index.php                 <-- Pintu masuk utama (Routing)
 ```
+# 🛣️ Alur Program
+
+1. **Pintu Masuk (Entry Point)** Setiap kali pengguna mengakses aplikasi, sistem memulai proses dari file index.php.
+* File ini berfungsi sebagai pusat kontrol yang memanggil ViewModel secara otomatis.
+* Tidak ada koneksi database manual di setiap halaman; koneksi hanya terbuka saat ViewModel membutuhkannya.
+
+2. **Mekanisme Routing** Pengguna berpindah halaman melalui menu navigasi (Artis, Venue, Konser, Tiket).
+* URL mengirimkan sinyal (seperti ?page=artis) ke index.php.
+* Sistem merespons dengan menampilkan daftar data terbaru yang diambil langsung dari database melalui perantara ViewModel.
+
+3. **Eksekusi Data (Operasi CRUD)**
+* Input & Edit: Saat pengguna mengisi formulir Artis atau Venue, data dikirim ke server. ViewModel menangkap data tersebut, memvalidasinya, lalu menyuruh Model untuk menyimpannya ke tabel MySQL.
+* Hapus: Saat tombol hapus ditekan, sistem mencari ID data tersebut dan menghapusnya secara permanen.
+
+4. **Logika Relasi (Konser & Tiket)** Bagian ini menangani hubungan antar-data:
+* Pembuatan Jadwal: Sistem menggabungkan data Artis dan Venue. Pengguna tinggal memilih nama artis dan lokasi dari daftar yang tersedia, tanpa perlu mengetik ID manual.
+* Pembelian Tiket: Sistem menampilkan daftar Konser yang aktif. Saat tiket dipesan, sistem otomatis mengaitkan data pemesan dengan konser yang dipilih tersebut.
 
 # 🎥 Dokumentasi
 
