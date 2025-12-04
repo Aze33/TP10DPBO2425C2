@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9; /* Abu-abu sangat muda */
+    color: #333; /* Hitam  */
+    padding: 30px;
+    line-height: 1.6;
+}
+
+/* Judul Halaman */
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Navigasi (Menu Atas) */
+.nav {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    margin: 0 15px;
+    padding: 8px 12px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.nav a:hover {
+    background-color: #e2e6ea;
+    color: #007bff;
+}
+
+/* Tombol (Button) */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-add {
+    background-color: #28a745; /* Hijau */
+    margin-bottom: 15px;
+}
+
+.btn-edit {
+    background-color: #ffc107; /* Kuning */
+    color: #333; /* Teks hitam biar terbaca */
+    margin-right: 5px;
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Merah */
+}
+
+/* Tabel Data */
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-collapse: collapse; /* Garis tabel menyatu rapi */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Agar sudut tabel tumpul */
+}
+
+thead {
+    background-color: #007bff; /* Biru Header */
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+thead tr:hover {
+    background-color: #007bff !important; 
+    cursor: default; 
+}
+
+/* Formulir (Form Input) */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #e1e1e1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Link Kembali */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Mobile */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav a {
+        margin: 5px 0;
+    }
+}
